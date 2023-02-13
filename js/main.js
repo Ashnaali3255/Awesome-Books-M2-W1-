@@ -31,15 +31,15 @@ const addBook = () => {
   const author = document.querySelector('#author').value;
   books.push({
     index: books.length,
-    title: title,
-    author: author
+    title,
+    author,
   });
   saveBooks();
   displayBooks();
 };
 // Remove a book from the collection
 const removeBook = (index) => {
-  books = books.filter(book => book.index !== index);
+  books = books.filter((book) => book.index !== index);
   saveBooks();
   displayBooks();
 };
@@ -51,4 +51,4 @@ document.querySelector('#book-collection').addEventListener('click', (event) => 
     removeBook(parseInt(event.target.dataset.index));
   }
 });
-loadBooks
+loadBooks;
