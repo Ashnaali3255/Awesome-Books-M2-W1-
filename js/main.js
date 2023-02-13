@@ -15,15 +15,15 @@ const saveBooks = () => {
 const displayBooks = () => {
   const bookCollection = document.querySelector('#book-collection');
   bookCollection.innerHTML = '';
-  for (const book of books) {
+  books.forEach((book) => {
     const bookEl = document.createElement('div');
     bookEl.classList.add('book');
     bookEl.innerHTML = `
-      <span>${book.title}<br> ${book.author}</span>
+      <span>${book.title} <br> ${book.author}</span>
       <button data-index="${book.index}">Remove</button>
     `;
     bookCollection.appendChild(bookEl);
-  }
+  });
 };
 // Add a book to the collection
 const addBook = () => {
@@ -48,7 +48,7 @@ document.querySelector('#add-book').addEventListener('click', addBook);
 // Handle "Remove" button click
 document.querySelector('#book-collection').addEventListener('click', (event) => {
   if (event.target.tagName === 'BUTTON') {
-    removeBook(parseInt(event.target.dataset.index));
+    removeBook(parseInt(event.target.dataset.index, 10));
   }
 });
-loadBooks;
+loadBooks();
