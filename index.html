@@ -4,32 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Books</title>
+    <title>awesome-books</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <section>
-            <h1>Awesome Books</h1>
-            <div>
-            <p>Lorem ipsum</p>
-            <p>Testeroo Testy</p>
-            <button>Remove</button>
-        </div>
-        <hr>
-        <div>
-            <p>Second Book</p>
-            <p>Testeroo Testy</p>
-            <button>Remove</button>
-        </div>
-        <hr>
-        <div>
-            <input class="title" type="title" name="title" placeholder="Title" maxlength="30" required>
-          </div><br>
-          <div>
-            <input class="title" type="Author" id="author" name="name" placeholder="Author" required>
-          </div><br>
-          <button>Add</button>
-        </section>
-    </main>
+    <html>
+          <h1>Awesome Books</h1>
+          <div class="book-collection" id="book-collection">
+            <!-- books will be displayed here -->
+          </div class>
+          <h2>Add a book</h2>
+          <div class="book-details">
+            <input type="text" id="title" placeholder="Title"><br>
+            <input type="text" id="author" placeholder="Author"><br>
+            <button id="add-book">Add</button>
+          </div>
+        </body>
+      </html>
+<script src="./js/main.js"></script>
 </body>
 </html>
