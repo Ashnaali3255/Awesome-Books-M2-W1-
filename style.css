@@ -2,6 +2,43 @@ body {
   font-family: Arial, sans-serif;
 }
 
+nav {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+section {
+  display: none;
+  padding: 20px;
+}
+
+/* Show the active section */
+section:target {
+  display: block;
+}
+
+/* Hide all other sections */
+section:not(:target) {
+  display: none;
+}
+
 h1 {
   margin: 0;
   padding: 1em;
@@ -23,13 +60,14 @@ h1 {
 }
 
 #add-button {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 #book-list {
   width: 90vw;
   margin: auto;
   margin-top: 20px;
+  max-height: 50vh;
 }
 
 #books {
@@ -64,12 +102,7 @@ h1 {
 
 .add-book {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin: 2em auto;
-  font-size: 30px;
-  max-width: 500px;
-  padding: 1em;
 }
 
 .list {
@@ -117,4 +150,23 @@ li:hover {
 li.selected {
   background-color: #ff4081;
   color: #fff;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: whitesmoke;
+  margin: 1rem;
+  height: 50vh;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  border: 2px solid black;
+  border-radius: 8px;
+  width: 98%;
+  position: absolute;
 }
